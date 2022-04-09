@@ -31,7 +31,7 @@ namespace WordPressXF.ViewModels
             try
             {
                 await _accountViewModel.TryAutoLoginCommand.ExecuteAsync(null);
-                await _postsViewModel.LoadMorePostsCommand.ExecuteAsync(null);
+                await _postsViewModel.LoadPostsCommand.ExecuteAsync(null);
 
                 await _navigationService.NavigateToAsync(NavigationTarget.PostsOverviewPage);
                 _navigationService.ClearBackstack();
