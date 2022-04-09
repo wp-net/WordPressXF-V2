@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordPressXF.Views.Controls.CommentView"
+             x:Name="Root">
+
+    <ContentView.Content>
+        <Frame CornerRadius="8">
+            <Grid RowDefinitions="Auto,Auto">
+                <Label Text="{Binding Comment, Converter={StaticResource HtmlStringToDecodedStringConverter}, Source={x:Reference Root}}"
+                       Grid.Row="0" />
+
+                <Label Text="{Binding Author, Source={x:Reference Root}}"
+                       Style="{DynamicResource PostCommentAuthorLabelStyle}"
+                       Grid.Row="1" />
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+    
+</ContentView>

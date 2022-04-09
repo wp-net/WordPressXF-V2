@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="WordPressXF.Styles.Colors">
+
+    <Color x:Key="AccentColor">#004d40</Color>
+
+    <Color x:Key="NavigationBarBackgroundColor">#004d40</Color>
+    <Color x:Key="NavigationBarTextColor">#FFFFFF</Color>
+
+    <Color x:Key="TabStripBackgroundColor">#004d40</Color>
+    <Color x:Key="TabIndicatorColor">#FFFFFF</Color>
+    <Color x:Key="TabViewItemTextColor">#D3D3D3</Color>
+    <Color x:Key="TabViewItemTextColorSelected">#FFFFFF</Color>
+
+    <Color x:Key="ButtonBackgroundColor">#004d40</Color>
+    <Color x:Key="ButtonTextColor">#FFFFFF</Color>
+
+    <Color x:Key="PageBackgroundColor">#E0E0E0</Color>
+
+</ResourceDictionary>
