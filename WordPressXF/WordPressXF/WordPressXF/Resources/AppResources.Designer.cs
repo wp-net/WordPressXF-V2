@@ -61,6 +61,60 @@ namespace WordPressXF.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current User.
+        /// </summary>
+        internal static string AccountPageCurrentUserLabel {
+            get {
+                return ResourceManager.GetString("AccountPageCurrentUserLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string AccountPageLoginButton {
+            get {
+                return ResourceManager.GetString("AccountPageLoginButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string AccountPageLogoutButton {
+            get {
+                return ResourceManager.GetString("AccountPageLogoutButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string AccountPagePasswordLabelPlaceholder {
+            get {
+                return ResourceManager.GetString("AccountPagePasswordLabelPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account.
+        /// </summary>
+        internal static string AccountPageTitle {
+            get {
+                return ResourceManager.GetString("AccountPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        internal static string AccountPageUsernameLabelPlaceholder {
+            get {
+                return ResourceManager.GetString("AccountPageUsernameLabelPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have to login first to be able to post a comment..
         /// </summary>
         internal static string CommentDialogNotAuthorizedMessage {
