@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:WordPressXF.Converters"
              xmlns:init="clr-namespace:WordPressXF.Init"
              xmlns:styles="clr-namespace:WordPressXF.Styles"
              x:Class="WordPressXF.App">
@@ -11,7 +12,10 @@
                 <styles:Colors />
                 <styles:Styles />
             </ResourceDictionary.MergedDictionaries>
-            
+
+            <converters:EmbeddedToFeaturedImageConverter x:Key="EmbeddedToFeaturedImageConverter" />
+            <converters:HtmlStringToDecodedStringConverter x:Key="HtmlStringToDecodedStringConverter" />
+
             <init:ViewModelLocator x:Key="ViewModelLocator"/>
         </ResourceDictionary>
     </Application.Resources>
