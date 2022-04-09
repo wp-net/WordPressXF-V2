@@ -154,4 +154,7 @@
       <Name>WordPressXF</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash.png" />
+  </ItemGroup>
 </Project>
