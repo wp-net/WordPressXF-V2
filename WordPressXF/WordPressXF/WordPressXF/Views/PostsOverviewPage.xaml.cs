@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace WordPressXF
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace WordPressXF.Views
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PostsOverviewPage : ContentPage
     {
-        public MainPage()
+        public PostsOverviewPage()
         {
             InitializeComponent();
         }

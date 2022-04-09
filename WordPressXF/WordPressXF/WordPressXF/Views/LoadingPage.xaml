@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordPressXF.Views.LoadingPage"
+             BindingContext="{Binding LoadingViewModel, Source={x:StaticResource ViewModelLocator}}"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+
+    <ContentPage.Content>
+        <ActivityIndicator IsRunning="True" />
+    </ContentPage.Content>
+
+</ContentPage>

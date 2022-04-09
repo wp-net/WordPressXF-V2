@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
+using WordPressXF.Models;
 using WordPressXF.Services;
 using WordPressXF.ViewModels;
+using WordPressXF.Views;
 
 namespace WordPressXF.Init
 {
@@ -48,6 +50,9 @@ namespace WordPressXF.Init
         private static NavigationService CreateNavigationService()
         {
             var navigationService = new NavigationService();
+
+            navigationService.Configure(NavigationTarget.LoadingPage, typeof(LoadingPage));
+            navigationService.Configure(NavigationTarget.PostsOverviewPage, typeof(PostsOverviewPage));
 
             return navigationService;
         }

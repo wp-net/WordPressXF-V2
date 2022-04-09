@@ -39,5 +39,11 @@
 	  <EmbeddedResource Update="Styles\Styles.xaml">
 	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
+	  <EmbeddedResource Update="Views\LoadingPage.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Views\PostsOverviewPage.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
 	</ItemGroup>
 </Project>
