@@ -1,5 +1,8 @@
-﻿using WordPressXF.Init;
+﻿using Microsoft.Extensions.DependencyInjection;
+using WordPressXF.Init;
 using WordPressXF.Resources;
+using WordPressXF.Services;
+using WordPressXF.Views;
 using Xamarin.CommunityToolkit.Helpers;
 using Xamarin.Forms;
 
@@ -15,7 +18,8 @@ namespace WordPressXF
 
             LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoadingPage());
+            Bootstrapper.ServiceProvider.GetService<NavigationService>().Initialize(MainPage);
         }
 
         protected override void OnStart()
