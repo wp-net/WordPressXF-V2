@@ -126,4 +126,7 @@
   <data name="DialogOk" xml:space="preserve">
     <value>Ok</value>
   </data>
+  <data name="PostsOverviewPageTitle" xml:space="preserve">
+    <value>Posts</value>
+  </data>
 </root>

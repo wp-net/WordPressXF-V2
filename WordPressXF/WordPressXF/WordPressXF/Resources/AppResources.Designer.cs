@@ -86,5 +86,14 @@ namespace WordPressXF.Resources {
                 return ResourceManager.GetString("DialogOk", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posts.
+        /// </summary>
+        internal static string PostsOverviewPageTitle {
+            get {
+                return ResourceManager.GetString("PostsOverviewPageTitle", resourceCulture);
+            }
+        }
     }
 }
