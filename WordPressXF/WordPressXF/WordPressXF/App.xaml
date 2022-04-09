@@ -15,6 +15,7 @@
 
             <converters:EmbeddedToFeaturedImageConverter x:Key="EmbeddedToFeaturedImageConverter" />
             <converters:HtmlStringToDecodedStringConverter x:Key="HtmlStringToDecodedStringConverter" />
+            <converters:NullToIsVisibleConverter x:Key="NullToIsVisibleConverter" />
 
             <init:ViewModelLocator x:Key="ViewModelLocator"/>
         </ResourceDictionary>
