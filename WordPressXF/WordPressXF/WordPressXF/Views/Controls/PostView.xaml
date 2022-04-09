@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordPressXF.Views.Controls.PostView"
+             x:Name="Root">
+
+    <ContentView.Content>
+        <Frame CornerRadius="8">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto">
+                <Image Source="{Binding Embedded, Converter={StaticResource EmbeddedToFeaturedImageConverter}, Source={x:Reference Root}}"
+                       Grid.Row="0" />
+
+                <Label Text="{Binding Date, 
+                    StringFormat='{0:g}', 
+                    Source={x:Reference Root}}"
+                       Style="{StaticResource PostDateLabelStyle}"
+                       Grid.Row="1" />
+
+                <Label Text="{Binding Title, Converter={StaticResource HtmlStringToDecodedStringConverter}, Source={x:Reference Root}}"
+                       Style="{StaticResource PostTitleLabelStyle}"
+                       Grid.Row="2" />
+
+                <Label Text="{Binding Excerpt, Converter={StaticResource HtmlStringToDecodedStringConverter}, Source={x:Reference Root}}"
+                       Grid.Row="3" />
+            </Grid>
+
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="FrameOnTapped" />
+            </Frame.GestureRecognizers>
+        </Frame>
+    </ContentView.Content>
+
+</ContentView>
