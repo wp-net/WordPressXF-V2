@@ -51,9 +51,10 @@ namespace WordPressXF.Init
         {
             var navigationService = new NavigationService();
 
+            navigationService.Configure(NavigationTarget.AccountPage, typeof(AccountPage));
             navigationService.Configure(NavigationTarget.LoadingPage, typeof(LoadingPage));
-            navigationService.Configure(NavigationTarget.PostsOverviewPage, typeof(PostsOverviewPage));
             navigationService.Configure(NavigationTarget.PostDetailOverviewPage, typeof(PostDetailOverviewPage));
+            navigationService.Configure(NavigationTarget.PostsOverviewPage, typeof(PostsOverviewPage));
 
             return navigationService;
         }
