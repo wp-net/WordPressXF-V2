@@ -7,7 +7,6 @@ using WordPressXF.Services;
 
 namespace WordPressXF.ViewModels
 {
-    [INotifyPropertyChanged]
     internal partial class AccountViewModel : BaseViewModel
     {
         private readonly SettingsService _settingsService;
@@ -67,7 +66,7 @@ namespace WordPressXF.ViewModels
             IsCurrentlyLoggingIn = false;
         }
 
-        [ICommand(AllowConcurrentExecutions = false)]
+        [ICommand]
         private void Logout()
         {
             _wordPressService.Logout();

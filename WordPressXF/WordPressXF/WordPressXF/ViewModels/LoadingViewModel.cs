@@ -8,7 +8,6 @@ using WordPressXF.Services;
 
 namespace WordPressXF.ViewModels
 {
-    [INotifyPropertyChanged]
     internal partial class LoadingViewModel : BaseViewModel
     {
         private readonly NavigationService _navigationService;
