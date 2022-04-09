@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
                     x:Class="WordPressXF.Styles.Styles">
-    
+
     <Style TargetType="NavigationPage">
         <Setter Property="BarBackgroundColor"
                 Value="{DynamicResource NavigationBarBackgroundColor}" />
@@ -12,14 +13,6 @@
                 Value="Material" />
         <Setter Property="BackgroundColor"
                 Value="{DynamicResource PageBackgroundColor}" />
-    </Style>
-
-    <Style TargetType="TabbedPage"
-           ApplyToDerivedTypes="True">
-        <Setter Property="BarBackgroundColor"
-                Value="{DynamicResource TabbedPageBarBackgroundColor}" />
-        <Setter Property="BarTextColor"
-                Value="{DynamicResource TabbedPageBarTextColor}" />
     </Style>
 
     <Style TargetType="ContentPage"
@@ -39,6 +32,27 @@
                 Value="Center" />
         <Setter Property="VerticalOptions"
                 Value="Center" />
+    </Style>
+
+    <Style x:Key="DefaultTabViewStyle"
+           TargetType="xct:TabView">
+        <Setter Property="IsSwipeEnabled"
+                Value="False" />
+        <Setter Property="TabStripPlacement"
+                Value="Bottom" />
+        <Setter Property="TabIndicatorPlacement"
+                Value="Top" />
+        <Setter Property="TabStripBackgroundColor"
+                Value="{DynamicResource TabStripBackgroundColor}" />
+        <Setter Property="TabIndicatorColor"
+                Value="{DynamicResource TabIndicatorColor}" />
+    </Style>
+
+    <Style TargetType="xct:TabViewItem">
+        <Setter Property="TextColor"
+                Value="{DynamicResource TabViewItemTextColor}" />
+        <Setter Property="TextColorSelected"
+                Value="{DynamicResource TabViewItemTextColorSelected}" />
     </Style>
 
     <Style TargetType="Button">
@@ -71,5 +85,7 @@
         <Setter Property="HorizontalOptions"
                 Value="End" />
     </Style>
+
+
 
 </ResourceDictionary>

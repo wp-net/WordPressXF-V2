@@ -8,12 +8,14 @@
     <Color x:Key="NavigationBarBackgroundColor">#004d40</Color>
     <Color x:Key="NavigationBarTextColor">#FFFFFF</Color>
 
-    <Color x:Key="TabbedPageBarBackgroundColor">#004d40</Color>
-    <Color x:Key="TabbedPageBarTextColor">#FFFFFF</Color>
+    <Color x:Key="TabStripBackgroundColor">#004d40</Color>
+    <Color x:Key="TabIndicatorColor">#FFFFFF</Color>
+    <Color x:Key="TabViewItemTextColor">#D3D3D3</Color>
+    <Color x:Key="TabViewItemTextColorSelected">#FFFFFF</Color>
 
     <Color x:Key="ButtonBackgroundColor">#004d40</Color>
     <Color x:Key="ButtonTextColor">#FFFFFF</Color>
 
-    <Color x:Key="PageBackgroundColor">#e0e0e0</Color>
+    <Color x:Key="PageBackgroundColor">#E0E0E0</Color>
 
 </ResourceDictionary>

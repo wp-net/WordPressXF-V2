@@ -1,5 +1,7 @@
 ﻿using System;
 using WordPressPCL.Models;
+using WordPressXF.Init;
+using WordPressXF.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -63,6 +65,9 @@ namespace WordPressXF.Views.Controls
             var scale = viewSender.Scale;
             await viewSender.ScaleTo(scale * 0.95, 50);
             await viewSender.ScaleTo(scale, 50);
+
+            // click logic
+            await Bootstrapper.ServiceProvider.GetService<PostsViewModel>().SetSelectedPostCommand.ExecuteAsync(post);
         }
     }
 }

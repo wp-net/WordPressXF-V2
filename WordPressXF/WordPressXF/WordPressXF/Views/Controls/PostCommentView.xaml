@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:controls="clr-namespace:WordPressXF.Views.Controls"
+             x:Class="WordPressXF.Views.Controls.PostCommentView"
+             BindingContext="{Binding PostsViewModel, Source={x:StaticResource ViewModelLocator}}"
+             Padding="16">
+
+    <ContentView.Content>
+        <Grid RowDefinitions="*,Auto">
+            <CollectionView ItemsSource="{Binding Comments}"
+                            Grid.Row="0">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     VerticalItemSpacing="12" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.EmptyView>
+                    <Label Text="{xct:Translate PostCommentViewNoCommentsLabel}" />
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:CommentView Comment="{Binding Content.Rendered}"
+                                              Author="{Binding AuthorName}" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Grid ColumnDefinitions="*,Auto"
+                  Grid.Row="1">
+                <Entry Placeholder="{xct:Translate PostCommentViewCommentLabelPlaceholder}"
+                       Text="{Binding CommentText}"
+                       Grid.Column="0" />
+                <Button Text="{xct:Translate PostCommentViewCommentButton}"
+                        Command="{Binding PostCommentCommand}"
+                        VerticalOptions="End"
+                        Grid.Column="1" />
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

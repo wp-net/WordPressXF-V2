@@ -101,7 +101,7 @@ namespace WordPressXF.ViewModels
         }
 
         [ICommand(AllowConcurrentExecutions = false)]
-        private async Task SetSelectedPostASync(Post selectedPost)
+        private async Task SetSelectedPostAsync(Post selectedPost)
         {
             try
             {
@@ -117,7 +117,7 @@ namespace WordPressXF.ViewModels
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"{nameof(PostsViewModel)} | {nameof(SetSelectedPostASync)} | {ex}");
+                Debug.WriteLine($"{nameof(PostsViewModel)} | {nameof(SetSelectedPostAsync)} | {ex}");
             }
             finally
             {
