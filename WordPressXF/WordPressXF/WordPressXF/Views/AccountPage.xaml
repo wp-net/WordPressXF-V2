@@ -6,7 +6,7 @@
              x:Class="WordPressXF.Views.AccountPage"
              BindingContext="{Binding AccountViewModel, Source={x:StaticResource ViewModelLocator}}"
              Title="{xct:Translate AccountPageTitle}"
-             Padding="16">
+             Padding="{OnPlatform Default='16', iOS='16,16,16,48'}">
 
     <ContentPage.Resources>
         <converters:NameToInitialsConverter x:Key="NameToInitialsConverter" />
