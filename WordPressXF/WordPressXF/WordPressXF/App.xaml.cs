@@ -1,4 +1,5 @@
-﻿using WordPressXF.Resources;
+﻿using WordPressXF.Init;
+using WordPressXF.Resources;
 using Xamarin.CommunityToolkit.Helpers;
 using Xamarin.Forms;
 
@@ -8,6 +9,8 @@ namespace WordPressXF
     {
         public App()
         {
+            Bootstrapper.Init();
+
             InitializeComponent();
 
             LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
