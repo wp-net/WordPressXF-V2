@@ -8,6 +8,11 @@
              Title="{xct:Translate PostsOverviewPageTitle}"
              Padding="16">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="{xct:ImageResource WordPressXF.Assets.account.png}"
+                     Command="{Binding ShowAccountCommand}" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <RefreshView Command="{Binding LoadPostsCommand}"
                      IsRefreshing="{Binding IsRefreshing}">
