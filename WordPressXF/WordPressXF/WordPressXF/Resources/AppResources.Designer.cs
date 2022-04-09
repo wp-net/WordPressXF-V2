@@ -88,6 +88,51 @@ namespace WordPressXF.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send.
+        /// </summary>
+        internal static string PostCommentViewCommentButton {
+            get {
+                return ResourceManager.GetString("PostCommentViewCommentButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Comment....
+        /// </summary>
+        internal static string PostCommentViewCommentLabelPlaceholder {
+            get {
+                return ResourceManager.GetString("PostCommentViewCommentLabelPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Currently there are no comments for this post..
+        /// </summary>
+        internal static string PostCommentViewNoCommentsLabel {
+            get {
+                return ResourceManager.GetString("PostCommentViewNoCommentsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comments.
+        /// </summary>
+        internal static string PostCommentViewTitle {
+            get {
+                return ResourceManager.GetString("PostCommentViewTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post.
+        /// </summary>
+        internal static string PostDetailViewTitle {
+            get {
+                return ResourceManager.GetString("PostDetailViewTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Posts.
         /// </summary>
         internal static string PostsOverviewPageTitle {

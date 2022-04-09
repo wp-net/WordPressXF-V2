@@ -126,6 +126,21 @@
   <data name="DialogOk" xml:space="preserve">
     <value>Ok</value>
   </data>
+  <data name="PostCommentViewCommentButton" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="PostCommentViewCommentLabelPlaceholder" xml:space="preserve">
+    <value>Your Comment...</value>
+  </data>
+  <data name="PostCommentViewNoCommentsLabel" xml:space="preserve">
+    <value>Currently there are no comments for this post.</value>
+  </data>
+  <data name="PostCommentViewTitle" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="PostDetailViewTitle" xml:space="preserve">
+    <value>Post</value>
+  </data>
   <data name="PostsOverviewPageTitle" xml:space="preserve">
     <value>Posts</value>
   </data>
