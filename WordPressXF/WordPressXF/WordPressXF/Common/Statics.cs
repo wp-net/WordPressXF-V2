@@ -2,7 +2,7 @@
 {
     internal static class Statics
     {
-        public static string WordpressUrl = "https://developer.wordpress.org/wp-json";
+        public static string WordpressUrl = "https://wordpress.org/news/wp-json/";
 
         public static int PageSize = 10;
 
