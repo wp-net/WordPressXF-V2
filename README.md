@@ -5,7 +5,9 @@ It's built on
 * [WordPressPCL (WordPress REST API Wrapper)](https://github.com/wp-net/WordPressPCL)
 * [Xamarin.Forms 5.0](https://github.com/xamarin/Xamarin.Forms)
 
+
 ## Features
+
 working and planned features for WordPressXF:
 - [x] Show posts
 - [x] Show comments
@@ -14,13 +16,25 @@ working and planned features for WordPressXF:
 - [x] Sign In
 - [x] Add comment
 
+
+## Screenshots
+
+<img src="docs/wordpressxf-v2-01.png" alt="Screenshot-01" width="400"/>
+
+<br/>
+
+<img src="docs/wordpressxf-v2-02.png" alt="Screenshot-02" width="400"/>
+
+
 # Quickstart
 
 ## WordPress Plugins
+
 Since WordPress 4.7 the REST API has been integrated into the core so there's no need for any plugins to get basic functionality. If you want to access protected endpoints, this library supports authentication through JSON Web Tokens (JWT) (plugin required).
 
 * [WordPress 4.7 or newer](https://wordpress.org/)
 * [JWT Authentication for WP REST API](https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/)
+
 
 ## Getting Started
 
