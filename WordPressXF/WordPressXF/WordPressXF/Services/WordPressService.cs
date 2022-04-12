@@ -24,7 +24,7 @@ namespace WordPressXF.Services
             {
                 page++;
 
-                var posts = await _client.Posts.Query(new PostsQueryBuilder
+                var posts = await _client.Posts.QueryAsync(new PostsQueryBuilder
                 {
                     Page = page,
                     PerPage = perPage,
@@ -43,9 +43,9 @@ namespace WordPressXF.Services
 
         public async Task<List<CommentThreaded>> GetCommentsForPostAsync(int postid)
         {
-            var comments = await _client.Comments.Query(new CommentsQueryBuilder
+            var comments = await _client.Comments.QueryAsync(new CommentsQueryBuilder
             {
-                Posts = new[] { postid },
+                Posts = new List<int> { postid },
                 Page = 1,
                 PerPage = 100
             });
@@ -55,10 +55,9 @@ namespace WordPressXF.Services
 
         public async Task<User> LoginAsync(string username, string password)
         {
-            _client.AuthMethod = AuthMethod.JWT;
-            await _client.RequestJWToken(username, password);
+            await _client.Auth.RequestJWTokenAsync(username, password);
 
-            var isAuthenticated = await _client.IsValidJWToken();
+            var isAuthenticated = await _client.Auth.IsValidJWTokenAsync();
 
             if (isAuthenticated)
                 return await _client.Users.GetCurrentUser();
@@ -68,12 +67,12 @@ namespace WordPressXF.Services
 
         public void Logout()
         {
-            _client.Logout();
+            _client.Auth.Logout();
         }
 
         public async Task<bool> IsUserAuthenticatedAsync()
         {
-            return await _client.IsValidJWToken();
+            return await _client.Auth.IsValidJWTokenAsync();
         }
 
         public async Task<Comment> PostCommentAsync(int postId, string text, int replyTo = 0)
@@ -82,7 +81,7 @@ namespace WordPressXF.Services
             if (replyTo != 0)
                 comment.ParentId = replyTo;
 
-            return await _client.Comments.Create(comment);
+            return await _client.Comments.CreateAsync(comment);
         }
     }
 }
